@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Strings</h1>
+<h2>The length Property</h2>
+
+<p>The length of the string is:</p>
+<p id="len"></p>
+
+<script>
+let text1 = "qwertyuiopasdfghjklzxcvbnm";
+document.getElementById("len").innerHTML = text1.length;
+</script><br>
+
+
+
+<h2>The slice() Method</h2>
+
+<p>The sliced (extracted) part of the string is:</p>
+<p id="cut"></p>
+
+<script>
+let text2 = "Red, Blue, White, Yellow, purple";
+let part = text2.slice(11,16);
+document.getElementById("cut").innerHTML = part; 
+</script><br>
+
+
+
+<h2>JavaScript String Methods</h2>
+<p>The extracted part of string is:</p>
+
+<p id="cut2"></p>
+
+<script>
+let str = "Red, Blue, White, Yellow, purple";
+document.getElementById("cut2").innerHTML = str.substr(11);
+</script><br>
+
+
+
+<h2>Java string replace</h2>
+<p>Replace "Dhruv" with "Dholiya" in the paragraph below:</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="rep">Hello! how are you Dhruv.</p>
+
+<script>
+function myFunction() {
+  let text = document.getElementById("rep").innerHTML; 
+  document.getElementById("rep").innerHTML =
+  text.replace("Dhruv","Dholiya");
+}
+</script><br>
+
+
+
+<h2>The replaceAll() Method</h2>
+
+<p>Replace all words in the sentence:</p>
+
+<p id="repall"></p>
+
+<script>
+let text = "I felt happy because I saw the others were happy and because I knew I should feel happy, but I was not really happy."
+text = text.replaceAll("Happy","Sad");
+text = text.replaceAll("happy","sad");
+document.getElementById("repall").innerHTML = text;
+</script><br>
+
+
+
+<h1>JavaScript Number Methods</h1>
+
+<p>The toExponential() method returns a string, with the number rounded and written using exponential notation.</p>
+<p id="num1"></p>
+
+<script>
+let x = 8.48;
+document.getElementById("num1").innerHTML =
+  x.toExponential() + "<br>" + 
+  x.toExponential(2) + "<br>" + 
+  x.toExponential(4) + "<br>" + 
+  x.toExponential(6) + "<br>" +
+  x.toExponential(8);
+</script><br>
+
+
+
+<h2>JavaScript Global Methods</h2>
+
+<p>The Number() method converts variables to numbers:</p>
+
+<p id="num2"></p>
+
+<script>
+document.getElementById("num2").innerHTML = 
+  Number(true) + "<br>" +
+  Number(false) + "<br>" +
+  Number("1") + "<br>" + 
+  Number("  1") + "<br>" +
+  Number("30  ") + "<br>" +
+  Number(" 1000  ") + "<br>" +
+  Number("1.222") + "<br>" + 
+  Number("10,33") + "<br>" +
+  Number("10 33") + "<br>" +
+  Number("hello 21") + "<br>" +
+  Number("hello");
+</script><br>
+
+
+
+<h2>The isInteger() Method</h2>
+
+<p>The isInteger() method returns true if the argument is an integer.</p>
+<p>Otherwise it returns false.</p>
+
+<p id="findinteger"></p>
+
+<script>
+document.getElementById("findinteger").innerHTML =
+Number.isInteger(2635) + "<br>" + Number.isInteger(353.21);
+</script><br>
+
+
+
+<h1>JavaScript Numbers</h1><br>
+
+<p>The largest possible number in JavaScript is:</p>
+<p id="find"></p>
+
+<script>
+let y = Number.MAX_VALUE;
+document.getElementById("find").innerHTML = y;
+</script><br>
+
+
+<h2>The MIN_VALUE Property</h2>
+
+<p>The smallest number possible in JavaScript is:</p>
+<p id="min"></p>
+
+<script>
+let z = Number.MIN_VALUE;
+document.getElementById("min").innerHTML = z;
+</script><br>
+
+
+
+<h1>JavaScript Arrays</h1>
+<h2>The length Property</h2>
+
+<p>The length of an array is:</p>
+
+<p id="lenarr"></p>
+
+<script>
+const messa = ["hello!", "how", "its", "going?"];
+let size = messa.length;
+document.getElementById("lenarr").innerHTML = size;
+</script><br>
+
+
+<h2>The toString() Method</h2>
+
+<p>The toString() method to converst array into string:</p>
+
+<p id="con"></p>
+
+<script>
+const phone = ["Apple", "MI", "blackberry", "samsung", "OnePlus"];
+document.getElementById("con").innerHTML = phone.toString();
+</script><br>
+
+
+<h2>The pop() Method</h2>
+
+<p>The pop() method to removes the last element from an array.</p>
+
+<p id="rem1"></p>
+<p id="rem2"></p>
+
+<script>
+const car = ["Audi", "BMW", "General Motors", "Honda"];
+document.getElementById("rem1").innerHTML = car;
+car.pop();
+document.getElementById("rem2").innerHTML = car;
+</script><br>
+
+
+  
+  <h2>The push() Method</h2>
+  
+  <p>The push() method appends a new element to an array:</p>
+  
+  <p id="in1"></p>
+  <p id="in2"></p>
+  
+  <script>
+  const cars = ["Audi", "BMW", "General Motors", "Honda"];
+  document.getElementById("in1").innerHTML = cars;
+  cars.push("Lexus");
+  document.getElementById("in2").innerHTML = cars;
+  </script><br>
+
+
+<h2>Bracket Indexing</h2>
+
+<p>Array elements are accessed using their index number:</p>
+
+<p id="ind1"></p>
+<p id="ind2"></p>
+
+<script>
+const func = ["String", "String", "Array"];
+document.getElementById("ind1").innerHTML = func;
+func[0] = "Array";
+document.getElementById("ind2").innerHTML = func;
+</script><br>
+
+<h1>JavaScript Dates</h1>
+<h2>Using new Date()</h2>
+<p>current date and time:</p>
+
+<p id="date"></p>
+
+<script>
+const dat = new Date();
+document.getElementById("date").innerHTML = dat;
+</script><br>
+
+<h2>JavaScript new Date()</h2>
+
+<p>Using new Date(7 numbers), creates a new date object with the specified date and time:</p>
+
+<p id="specdate"></p>
+
+<script>
+const d = new Date(1999, 11, 12, 19, 44, 50, 0);
+document.getElementById("specdate").innerHTML = d;
+</script><br>
+
+<h2>JavaScript ISO Dates</h2>
+
+<p id="intstd"></p>
+
+<script>
+const da = new Date("2023-08-10");
+document.getElementById("intstd").innerHTML = da;
+</script><br>
+
+<h2>The getMonth() Method</h2>
+<p>Return the month of a date as a number from 0 to 11.</p>
+
+<p id="m"></p>
+
+<script>
+const mont = new Date("2021-03-25");
+document.getElementById("m").innerHTML = mont.getMonth() + 1;
+</script><br>
+
+
+<h2>JavaScript getMonth()</h2>
+<p>Return the month as a number.</p>
+<p>You can use an array of names to return the month as a name:</p>
+
+<p id="mnam"></p>
+
+<script>
+const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+const moname = new Date("2005-04-2");
+let month = months[moname.getMonth()];
+document.getElementById("mnam").innerHTML = month;
+</script><br>
+
+
+<h1>JavaScript Functions</h1>
+<h2>Product of three numbers</h2>
+
+<p>Call a function which performs a calculation and returns the result:</p>
+
+<p id="cal"></p>
+
+<script>
+let s = myFunction(3, 3, 3);
+document.getElementById("cal").innerHTML = s;
+
+function myFunction(a, b, c) {
+  return a * b *c;
+}
+</script><br>
+
+
+<h2>Fahrenheit to celsius</h2>
+
+<p>Invoke (call) a function that converts from Fahrenheit to Celsius:</p>
+<p id="ftoc"></p>
+
+<script>
+function toCelsius(f) {
+  return (5/9) * (f-32);
+}
+
+let value = toCelsius(77);
+document.getElementById("ftoc").innerHTML = value;
+</script>
+
+
+</body>
+</html>
+
